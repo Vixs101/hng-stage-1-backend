@@ -1,0 +1,34 @@
+{
+  "name": "hng-stage-1-backend",
+  "version": "1.0.0",
+  "description": "RESTful API service that analyzes strings and stores their computed properties",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vixs101/hng-stage-1-backend.git"
+  },
+  "keywords": [
+    "string-analyzer",
+    "api",
+    "rest",
+    "express"
+  ],
+  "author": "Elijah Victor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vixs101/hng-stage-1-backend/issues"
+  },
+  "homepage": "https://github.com/Vixs101/hng-stage-1-backend#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
