@@ -85,14 +85,24 @@ function findAll(filter = {}) {
  */
 
 function deletedByValue(value) {
-    const index = stringsDB.findIndex(item => item.value === value);
+  console.log("Database deleteByValue called with:", value);
+  console.log(
+    "Current database:",
+    stringsDB.map((s) => s.value)
+  );
 
-    if (index === -1) {
-        return false;
-    }
+  const index = stringsDB.findIndex((item) => item.value === value);
 
-    stringsDB.splice(index, 1);
-    return true;
+  console.log("Index found:", index);
+
+  if (index === -1) {
+    console.log("String not found for deletion.");
+    return false;
+  }
+
+  stringsDB.splice(index, 1);
+  console.log("String deleted successfully.");
+  return true;
 }
 
 /**
@@ -101,7 +111,7 @@ function deletedByValue(value) {
  */
 
 function count() {
-    return stringsDB.length;
+  return stringsDB.length;
 }
 
 /**
@@ -110,15 +120,15 @@ function count() {
  */
 
 function clear() {
-    stringsDB.length = 0;
+  stringsDB.length = 0;
 }
 
 module.exports = {
-    saveString,
-    findById,
-    findByValue,
-    findAll,
-    deletedByValue,
-    count,
-    clear,
-}
+  saveString,
+  findById,
+  findByValue,
+  findAll,
+  deletedByValue,
+  count,
+  clear,
+};
