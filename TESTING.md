@@ -14,10 +14,10 @@ npm run dev
 You should see:
 ```
 =================================
-🚀 String Analyzer API Started
-📡 Server running on port 3000
-🌍 Environment: development
-🔗 URL: http://localhost:3000
+String Analyzer API Started
+Server running on port 3000
+Environment: development
+URL: http://localhost:3000
 =================================
 ```
 
