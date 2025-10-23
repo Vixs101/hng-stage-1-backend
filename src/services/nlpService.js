@@ -122,6 +122,6 @@ function hasValidFilters(filters) {
 }
 
 module.exports = {
-  parseNaturalLanguageQuery,
+  parseNLPQuery,
   hasValidFilters,
 };

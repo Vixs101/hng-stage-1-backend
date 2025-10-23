@@ -17,15 +17,15 @@ function analyzeString(inputString) {
 
   const sha256Hash = generateHash(inputString);
 
-  const charaterFrequencyMap = buildFrequencyMap(inputString);
+  const characterFrequencyMap = buildFrequencyMap(inputString);
 
   return {
     length,
-    isPalindrome,
-    uniqueCharacters,
-    wordCount,
-    sha256Hash,
-    charaterFrequencyMap,
+    is_palindrome: isPalindrome,
+    unique_characters: uniqueCharacters,
+    word_count: wordCount,
+    sha256_hash: sha256Hash,
+    character_frequency_map: characterFrequencyMap,
   };
 }
 
@@ -83,13 +83,13 @@ function generateHash(str) {
  */
 
 function buildFrequencyMap(str) {
-    const frequencyMap = {};
+  const frequencyMap = {};
 
-    for (const char of str) {
-        frequencyMap[char] = (frequencyMap[char] || 0) + 1;
-    }
+  for (const char of str) {
+    frequencyMap[char] = (frequencyMap[char] || 0) + 1;
+  }
 
-    return frequencyMap;
+  return frequencyMap;
 }
 
 module.exports = {
@@ -98,5 +98,5 @@ module.exports = {
   countUniqueCharacters,
   countWords,
   generateHash,
-  buildFrequencyMap
+  buildFrequencyMap,
 };
