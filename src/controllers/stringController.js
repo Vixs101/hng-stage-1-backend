@@ -250,7 +250,7 @@ async function deleteString(req, res) {
     const { value } = req.params;
 
     // Try to delete the string
-    const deleted = db.deleteByValue(value);
+    const deleted = db.deletedByValue(value);
 
     if (!deleted) {
       return res.status(404).json({
