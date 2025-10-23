@@ -42,10 +42,10 @@ function findByValue(value) {
  * @return {Array} An array of matching string data.
  */
 
-function findAll(filter = {}) {
+function findAll(filters = {}) {
   let results = [...stringsDB];
 
-  if (filter.isPalindrome !== undefined) {
+  if (filters.isPalindrome !== undefined) {
     results = results.filter(
       (item) => item.properties.is_palindrome === filters.is_palindrome
     );
